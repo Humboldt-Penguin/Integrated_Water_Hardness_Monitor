@@ -5,6 +5,7 @@ int analogBuffer[SCOUNT];    // store the analog value in the array, read from A
 int analogBufferTemp[SCOUNT];
 int analogBufferIndex = 0, copyIndex = 0;
 float averageVoltage = 0, tdsValue = 0, temperature = 25;
+int EPA_rec = 250;
 
 void setup()
 {
@@ -36,9 +37,11 @@ void loop()
     //Serial.print("voltage:");
     //Serial.print(averageVoltage,2);
     //Serial.print("V   ");
-    Serial.print("TDS----Value:");
+//    Serial.print("TDS----Value:");
     Serial.print(tdsValue, 0);
-    Serial.println("ppm");
+//    Serial.println("ppm");
+    Serial.print(" ");
+    Serial.println(EPA_rec);
   }
 }
 int getMedianNum(int bArray[], int iFilterLen)
